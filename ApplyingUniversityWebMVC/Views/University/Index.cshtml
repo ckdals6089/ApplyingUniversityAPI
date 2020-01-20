@@ -1,0 +1,202 @@
+﻿@model IEnumerable<ApplyingUniversityWebMVC.Models.University>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UniversityName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Province)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Link)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Latitude)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Longitude)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UniversityName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Province)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.City)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Link)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Latitude)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Longitude)
+                </td>
+            
+            </tr>
+        }
+    </tbody>
+</table>
+<div style="height:400px; width:600px; margin-left:200px" id="map">
+
+</div>
+<script>
+    function initMap() {
+        var University_of_TorontoString = 
+            '<div>' +
+            '<p><b>University_of_Toronto</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+            'sandstone rock formation in the southern part of the ' +
+            'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) ' +
+            'south west of the nearest large town, Alice Springs; 450&#160;km ';
+        var Centennial_CollegeString = 
+            '<div>' +
+            '<p><b>Centennial_College</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+            'sandstone rock formation in the southern part of the ' +
+            'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) ' +
+            'south west of the nearest large town, Alice Springs; 450&#160;km ';
+        var Durham_CollegeString = 
+            '<div>' +
+            '<p><b>Durham_College</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+            'sandstone rock formation in the southern part of the ' +
+            'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) ' +
+            'south west of the nearest large town, Alice Springs; 450&#160;km ';
+        var Lambton_CollegeString = 
+            '<div>' +
+            '<p><b>Lambton_College</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+            'sandstone rock formation in the southern part of the ' +
+            'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) ' +
+            'south west of the nearest large town, Alice Springs; 450&#160;km ';
+        var Mohawk_CollegeString = 
+            '<div>' +
+            '<p><b>Mohawk_College</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+            'sandstone rock formation in the southern part of the ' +
+            'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) ' +
+            'south west of the nearest large town, Alice Springs; 450&#160;km ';
+         var University_of_WaterlooString = 
+            '<div>' +
+            '<p><b>University_of_Waterloo</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+            'sandstone rock formation in the southern part of the ' +
+            'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) ' +
+            'south west of the nearest large town, Alice Springs; 450&#160;km ';
+         var Niagara_CollegeString = 
+            '<div>' +
+            '<p><b>Niagara_College</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+            'sandstone rock formation in the southern part of the ' +
+            'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) ' +
+            'south west of the nearest large town, Alice Springs; 450&#160;km ';
+        var options = {
+            zoom: 8,
+            center: { lat: 43.6629, lng: -79.3957 }
+        }
+        var map = new google.maps.Map(document.getElementById('map'), options)
+        var University_of_Toronto = new google.maps.Marker({
+            position: { lat: 43.6629, lng: -79.3957 },
+            map: map
+        });
+        var Centennial_College = new google.maps.Marker({
+            position: { lat: 43.7854, lng: -79.2265 },
+            map: map
+        });
+        var Durham_College = new google.maps.Marker({
+            position: { lat: 43.9397, lng: -78.8915 },
+            map: map
+        });
+        var Lambton_College = new google.maps.Marker({
+            position: { lat: 43.7733, lng: -79.3359 },
+            map: map
+        });
+        var Mohawk_College = new google.maps.Marker({
+            position: { lat: 43.2387, lng: -79.8881 },
+            map: map
+        });
+        var University_of_Waterloo = new google.maps.Marker({
+            position: { lat: 43.4723, lng: -80.5449 },
+            map: map
+        });
+        var Niagara_College = new google.maps.Marker({
+            position: { lat: 43.0152, lng: -79.2642 },
+            map: map
+        });
+
+        //University_of_Toronto
+        var University_of_TorontoInfo = new google.maps.InfoWindow({
+            content: University_of_TorontoString
+        });
+        University_of_Toronto.addListener('click', function () {
+            University_of_TorontoInfo.open(map, University_of_Toronto);
+        });
+        //Centennial_College
+        var Centennial_CollegeInfo = new google.maps.InfoWindow({
+            content:Centennial_CollegeString
+        });
+        Centennial_College.addListener('click', function () {
+            Centennial_CollegeInfo.open(map, Centennial_College);
+        });
+        //Lambton_College
+        var Lambton_CollegeInfo = new google.maps.InfoWindow({
+            content: Lambton_CollegeString
+        });
+        Lambton_College.addListener('click', function () {
+            Lambton_CollegeInfo.open(map, Lambton_College);
+        });
+        //Durham College
+        var Durham_CollegeInfo = new google.maps.InfoWindow({
+            content: Durham_CollegeString
+        });
+        Durham_College.addListener('click', function () {
+            Durham_CollegeInfo.open(map, Durham_College);
+        });
+        //Mohawk_College
+        var Mohawk_CollegeInfo = new google.maps.InfoWindow({
+            content: Mohawk_CollegeString
+        });
+        Mohawk_College.addListener('click', function () {
+            Mohawk_CollegeInfo.open(map, Mohawk_College);
+        });
+
+        //Niagara_College
+        var Niagara_CollegeInfo = new google.maps.InfoWindow({
+            content: Niagara_CollegeString
+        });
+        Niagara_College.addListener('click', function () {
+            Niagara_CollegeInfo.open(map, Niagara_College);
+        });
+
+        //University_of_Waterloo
+        var University_of_WaterlooInfo = new google.maps.InfoWindow({
+            content: University_of_WaterlooString
+        });
+        University_of_Waterloo.addListener('click', function () {
+            University_of_WaterlooInfo.open(map, University_of_Waterloo);
+        });
+     
+
+    };
+
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBL-N97zYtJZUDBwZ50LjDppa1sbQER3gw&callback=initMap">
+</script>

@@ -1,0 +1,53 @@
+﻿@model ApplyingUniversityWebMVC.Models.Application
+@using  Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+@{
+    var user = HttpContextAccessor.HttpContext.Session.GetString("user");
+    var userRole = HttpContextAccessor.HttpContext.Session.GetString("userRole");
+    ViewData["Title"] = "Create";
+    
+    
+}
+
+
+<h1>Create</h1>
+
+<h4>Application</h4>
+<hr />
+@if (user == null)
+{
+    <div>
+        <div class="col-md-4">
+            <label asp-for="ApplicationId" class="control-label">Please Login First</label>
+
+        </div>
+    </div>
+}
+else
+{
+
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input asp-for="ApplicationId" value="@{new Application();}" hidden="hidden" />
+                <div class="form-group">
+                    <label asp-for="University.UniversityName" class="control-label">College</label>
+                    <select asp-for="UniversityId" class="form-control" asp-items="@ViewBag.university"></select>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+}
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,14 @@
+C:\Users\ckdal\source\repos\ApplyingUniversityWeb\ApplyingUniversityWeb\bin\Debug\netcoreapp2.2\ApplyingUniversityWeb.deps.json
+C:\Users\ckdal\source\repos\ApplyingUniversityWeb\ApplyingUniversityWeb\bin\Debug\netcoreapp2.2\ApplyingUniversityWeb.runtimeconfig.json
+C:\Users\ckdal\source\repos\ApplyingUniversityWeb\ApplyingUniversityWeb\bin\Debug\netcoreapp2.2\ApplyingUniversityWeb.runtimeconfig.dev.json
+C:\Users\ckdal\source\repos\ApplyingUniversityWeb\ApplyingUniversityWeb\bin\Debug\netcoreapp2.2\ApplyingUniversityWeb.dll
+C:\Users\ckdal\source\repos\ApplyingUniversityWeb\ApplyingUniversityWeb\bin\Debug\netcoreapp2.2\ApplyingUniversityWeb.pdb
+C:\Users\ckdal\source\repos\ApplyingUniversityWeb\ApplyingUniversityWeb\obj\Debug\netcoreapp2.2\ApplyingUniversityWeb.csproj.CoreCompileInputs.cache
+C:\Users\ckdal\source\repos\ApplyingUniversityWeb\ApplyingUniversityWeb\obj\Debug\netcoreapp2.2\ApplyingUniversityWeb.RazorAssemblyInfo.cache
+C:\Users\ckdal\source\repos\ApplyingUniversityWeb\ApplyingUniversityWeb\obj\Debug\netcoreapp2.2\ApplyingUniversityWeb.RazorAssemblyInfo.cs
+C:\Users\ckdal\source\repos\ApplyingUniversityWeb\ApplyingUniversityWeb\obj\Debug\netcoreapp2.2\ApplyingUniversityWeb.AssemblyInfoInputs.cache
+C:\Users\ckdal\source\repos\ApplyingUniversityWeb\ApplyingUniversityWeb\obj\Debug\netcoreapp2.2\ApplyingUniversityWeb.AssemblyInfo.cs
+C:\Users\ckdal\source\repos\ApplyingUniversityWeb\ApplyingUniversityWeb\obj\Debug\netcoreapp2.2\ApplyingUniversityWeb.RazorTargetAssemblyInfo.cache
+C:\Users\ckdal\source\repos\ApplyingUniversityWeb\ApplyingUniversityWeb\obj\Debug\netcoreapp2.2\ApplyingUniversityWeb.dll
+C:\Users\ckdal\source\repos\ApplyingUniversityWeb\ApplyingUniversityWeb\obj\Debug\netcoreapp2.2\ApplyingUniversityWeb.pdb
+C:\Users\ckdal\source\repos\ApplyingUniversityWeb\ApplyingUniversityWeb\obj\Debug\netcoreapp2.2\ApplyingUniversityWeb.csprojAssemblyReference.cache

@@ -1,0 +1,9 @@
+C:\Users\ckdal\source\repos\ApplyingUniversityWeb\LibraryUniversity\bin\Debug\netstandard2.0\LibraryUniversity.deps.json
+C:\Users\ckdal\source\repos\ApplyingUniversityWeb\LibraryUniversity\bin\Debug\netstandard2.0\LibraryUniversity.dll
+C:\Users\ckdal\source\repos\ApplyingUniversityWeb\LibraryUniversity\obj\Debug\netstandard2.0\LibraryUniversity.csproj.CoreCompileInputs.cache
+C:\Users\ckdal\source\repos\ApplyingUniversityWeb\LibraryUniversity\obj\Debug\netstandard2.0\LibraryUniversity.AssemblyInfoInputs.cache
+C:\Users\ckdal\source\repos\ApplyingUniversityWeb\LibraryUniversity\obj\Debug\netstandard2.0\LibraryUniversity.AssemblyInfo.cs
+C:\Users\ckdal\source\repos\ApplyingUniversityWeb\LibraryUniversity\bin\Debug\netstandard2.0\LibraryUniversity.pdb
+C:\Users\ckdal\source\repos\ApplyingUniversityWeb\LibraryUniversity\obj\Debug\netstandard2.0\LibraryUniversity.dll
+C:\Users\ckdal\source\repos\ApplyingUniversityWeb\LibraryUniversity\obj\Debug\netstandard2.0\LibraryUniversity.pdb
+C:\Users\ckdal\source\repos\ApplyingUniversityWeb\LibraryUniversity\obj\Debug\netstandard2.0\LibraryUniversity.csprojAssemblyReference.cache

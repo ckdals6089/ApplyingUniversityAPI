@@ -1,0 +1,61 @@
+
+USE universityDatabase;
+
+CREATE TABLE dbo.[Users](
+	userId int NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	username varchar(50) not null,
+	password varchar(50) not null,
+	roll varchar(10) not null,
+	firstName varchar(30),
+	lastName varchar(30),
+	email varchar(50)
+);
+
+
+CREATE TABLE dbo.[University](
+	universityId INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	university_name varchar(100) NOT NUll,
+	province varchar(100) NOT NULL,
+	city varchar(100) NOT NULL,
+	link varchar(100) NOT NULL,
+	latitude varchar(50) NOT NULL,
+	longitude varchar(50) NOT NULL,
+); 
+
+CREATE TABLE dbo.[Application](
+	applicationId INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	userId INT NOT NULL,
+	universityId INT NOT NULL,
+	applied_date DATETIME,
+	CONSTRAINT FK_UserToApplication FOREIGN KEY(userId)
+		REFERENCES dbo.[Users]
+		ON DELETE CASCADE
+		ON UPDATE CASCADE,
+	CONSTRAINT FK_UniversityToApplication FOREIGN KEY(universityId)
+		REFERENCES dbo.[University]
+		ON DELETE CASCADE
+		ON UPDATE CASCADE
+);
+
+
+USE universityDatabase
+
+SET IDENTITY_INSERT University OFF
+SET IDENTITY_INSERT Users OFF
+INSERT INTO University (university_name, province,city, link, latitude, longitude)
+VALUES ('University of Toronto', 'ON', 'Toronto', 'https://www.utoronto.ca/', '43.6629', '79.3957');
+SET IDENTITY_INSERT University OFF
+INSERT INTO University (university_name, province,city, link, latitude, longitude)
+VALUES ('Centennial College', 'ON', 'Toronto','http://www.centennialcollege.ca/', '43.7854', '79.2265');
+INSERT INTO University (university_name, province,city, link, latitude, longitude)
+VALUES ('Durham College', 'ON', 'Oshawa','http://www.durhamcollege.ca/', '43.9397', '78.8915');
+INSERT INTO University (university_name, province,city, link, latitude, longitude)
+VALUES ('Mohawk College', 'ON', 'Hamilton','https://www.mohawkcollege.ca/', '43.7733', '79.335');
+INSERT INTO University (university_name, province,city, link, latitude, longitude)
+VALUES ('University of Waterloo', 'ON', Waterloo','http://uwaterloo.ca/', '43.2387', '79.8881');
+INSERT INTO University (university_name, province,city, link, latitude, longitude)
+VALUES ('Niagara College', 'ON', 'Niagara','http://www.niagaracollege.ca/', '43.7733', '79.3359');
+INSERT INTO University (university_name, province,city, link, latitude, longitude)
+VALUES ('Lambton College', 'ON', 'Sarnia','http://www.lambtoncollege.ca/', '43.0152', '79.2642');
+
+
